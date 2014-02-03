@@ -3,6 +3,11 @@ package com.stealthyone.mcb.gamegine.selections;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
+/**
+ * Represents a selection manager.
+ *
+ * Responsible for saving/loading selections, retrieving player selections, and getting the selection wand.
+ */
 public interface SelectionManager {
 
     public void saveSelections();

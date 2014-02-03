@@ -2,6 +2,9 @@ package com.stealthyone.mcb.gamegine.selections;
 
 import org.bukkit.Location;
 
+/**
+ * Base interface representing a selection for an arena.
+ */
 public interface Selection {
 
     /**
