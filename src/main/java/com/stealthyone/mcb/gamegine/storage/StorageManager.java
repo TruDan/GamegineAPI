@@ -1,5 +1,7 @@
 package com.stealthyone.mcb.gamegine.storage;
 
+import com.stealthyone.mcb.gamegine.GamegineConfig;
+
 import java.io.File;
 
 public interface StorageManager {
@@ -10,5 +12,12 @@ public interface StorageManager {
      * @return The base directory.
      */
     public File getDataFolder();
+
+    /**
+     * Returns the configuration file for Gamegine.
+     *
+     * @return The configuration file for Gamegine.
+     */
+    public GamegineConfig getGamegineConfig();
 
 }
