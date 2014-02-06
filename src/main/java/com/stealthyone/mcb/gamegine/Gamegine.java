@@ -15,6 +15,15 @@ public final class Gamegine {
     private static GamegineProvider provider;
 
     /**
+     * Returns the current version of the API.
+     *
+     * @return Gamegine API version.
+     */
+    public static String getVersion() {
+        return "1.0-SNAPSHOT";
+    }
+
+    /**
      * Returns the Gamegine provider
      *
      * @return The Gamegine provider that implements 'GamegineProvider'
