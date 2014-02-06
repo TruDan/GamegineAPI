@@ -1,6 +1,5 @@
 package com.stealthyone.mcb.gamegine.games;
 
-import com.stealthyone.mcb.gamegine.config.GameConfig;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
@@ -43,7 +42,7 @@ public abstract class Game {
         return name;
     }
 
-    public final GameUUID getUuid() {
+    public final GameUUID getUniqueId() {
         return uuid;
     }
 

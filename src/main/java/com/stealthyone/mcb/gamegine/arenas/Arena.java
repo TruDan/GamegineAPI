@@ -1,17 +1,15 @@
 package com.stealthyone.mcb.gamegine.arenas;
 
-import com.stealthyone.mcb.gamegine.config.ArenaConfig;
-
 public class Arena {
 
     private ArenaHandler owner;
-    private int id;
+    private int rawId;
     private ArenaUUID uuid;
     private ArenaConfig config;
 
-    public Arena(ArenaHandler owner, int id) {
+    public Arena(ArenaHandler owner, int rawId) {
         this.owner = owner;
-        this.id = id;
+        this.rawId = rawId;
         this.uuid = new ArenaUUID(this);
     }
 
@@ -19,11 +17,11 @@ public class Arena {
         return owner;
     }
 
-    public final int getId() {
-        return id;
+    public final int getRawId() {
+        return rawId;
     }
 
-    public final ArenaUUID getUuid() {
+    public final ArenaUUID getUniqueId() {
         return uuid;
     }
 
