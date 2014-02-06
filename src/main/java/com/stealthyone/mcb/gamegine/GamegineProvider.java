@@ -2,6 +2,7 @@ package com.stealthyone.mcb.gamegine;
 
 import com.stealthyone.mcb.gamegine.games.GameManager;
 import com.stealthyone.mcb.gamegine.signs.SignManager;
+import com.stealthyone.mcb.gamegine.storage.StorageManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public interface GamegineProvider {
@@ -43,6 +44,13 @@ public interface GamegineProvider {
      * @return The Gamegine API's version.
      */
     public String getApiVersion();
+
+    /**
+     * Returns the storage manager associated with the provider.
+     *
+     * @return StorageManager defined for the provider.
+     */
+    public StorageManager getStorageManager();
 
     /**
      * Returns the game manager associated with the provider.
