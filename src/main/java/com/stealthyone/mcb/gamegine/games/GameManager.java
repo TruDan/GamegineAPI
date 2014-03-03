@@ -1,5 +1,8 @@
 package com.stealthyone.mcb.gamegine.games;
 
+import com.stealthyone.mcb.gamegine.games.instances.GameInstance;
+import com.stealthyone.mcb.gamegine.games.instances.GameInstanceUUID;
+
 public interface GameManager {
 
     /**
@@ -46,5 +49,14 @@ public interface GameManager {
      *         Null if game doesn't exist or isn't registered.
      */
     public Game getGame(GameUUID gameUuid);
+
+    /**
+     * Returns a game instance with a given GameInstanceUUID.
+     *
+     * @param gameInstanceUuid GameInstanceUUID of game instance to retrieve.
+     * @return GameInstance.
+     *         Null if no game instance matching UUID is found.
+     */
+    public GameInstance getGameInstance(GameInstanceUUID gameInstanceUuid);
 
 }

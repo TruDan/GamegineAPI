@@ -1,6 +1,7 @@
 package com.stealthyone.mcb.gamegine.games;
 
 import com.stealthyone.mcb.gamegine.games.instances.GameInstance;
+import com.stealthyone.mcb.gamegine.games.instances.GameInstanceUUID;
 import com.stealthyone.mcb.stbukkitlib.lib.utils.RandomUtils;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -58,6 +59,14 @@ public abstract class Game {
             id = RandomUtils.getRandomString(8, true);
         }
         return id;
+    }
+
+    public final GameInstance getGameInstance(GameInstanceUUID gameInstanceUuid) {
+        return gameInstances.get(gameInstanceUuid.getInstanceId());
+    }
+
+    public final GameInstance getGameInstance(String gameInstanceId) {
+        return gameInstances.get(gameInstanceId);
     }
 
 }
