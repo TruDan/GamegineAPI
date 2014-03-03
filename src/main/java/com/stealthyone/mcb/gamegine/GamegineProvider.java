@@ -1,6 +1,7 @@
 package com.stealthyone.mcb.gamegine;
 
 import com.stealthyone.mcb.gamegine.games.GameManager;
+import com.stealthyone.mcb.gamegine.players.PlayerManager;
 import com.stealthyone.mcb.gamegine.signs.SignManager;
 import com.stealthyone.mcb.gamegine.storage.StorageManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -58,6 +59,13 @@ public interface GamegineProvider {
      * @return GameManager defined for the provider
      */
     public GameManager getGameManager();
+
+    /**
+     * Returns the player manager associated with the provider.
+     *
+     * @return PlayerManager defined for the provider.
+     */
+    public PlayerManager getPlayerManager();
 
     /**
      * Returns the sign manager associated with the provider.

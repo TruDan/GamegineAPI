@@ -8,6 +8,9 @@ import org.bukkit.Bukkit;
 
 import java.util.logging.Level;
 
+/**
+ * Represents the Gamegine API and provides simple access to various parts of it.
+ */
 public final class Gamegine {
 
     private Gamegine() { }
