@@ -15,7 +15,7 @@ public class GameginePlayerListener implements Listener {
 
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent e) {
-        Gamegine.getProvider().getPlayerManager().handlePlayerJoin(e.getPlayer());
+        Gamegine.getProvider().getPlayerManager().handlePlayerConnect(e.getPlayer());
     }
 
     @EventHandler
@@ -29,7 +29,7 @@ public class GameginePlayerListener implements Listener {
     }
 
     private void playerQuit(Player player) {
-        Gamegine.getProvider().getPlayerManager().handlePlayerQuit(player);
+        Gamegine.getProvider().getPlayerManager().handlePlayerDisconnect(player);
     }
 
 }

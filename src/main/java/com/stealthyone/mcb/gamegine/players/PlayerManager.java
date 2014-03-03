@@ -1,6 +1,7 @@
 package com.stealthyone.mcb.gamegine.players;
 
 import com.stealthyone.mcb.gamegine.games.Game;
+import com.stealthyone.mcb.gamegine.games.instances.GameInstance;
 import org.bukkit.entity.Player;
 
 /**
@@ -18,17 +19,25 @@ public interface PlayerManager {
     public Game getPlayerGame(Player player);
 
     /**
-     * Handles a player joining the server.
+     * Set the current game instance of a player.
+     *
+     * @param player Player to set game instance of.
+     * @param gameInstance Game instance to set.
+     */
+    public void setPlayerGame(Player player, GameInstance gameInstance);
+
+    /**
+     * Handles a player connecting to the server.
      *
      * @param player Joining player.
      */
-    public void handlePlayerJoin(Player player);
+    public void handlePlayerConnect(Player player);
 
     /**
      * Handles a player disconnecting from the server.
      *
      * @param player Leaving player.
      */
-    public void handlePlayerQuit(Player player);
+    public void handlePlayerDisconnect(Player player);
 
 }
