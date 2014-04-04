@@ -1,6 +1,6 @@
-package com.stealthyone.mcb.gamegine.storage;
+package com.stealthyone.mcb.gamegine.api.storage;
 
-import com.stealthyone.mcb.gamegine.GamegineConfig;
+import com.stealthyone.mcb.gamegine.api.GamegineConfig;
 
 import java.io.File;
 

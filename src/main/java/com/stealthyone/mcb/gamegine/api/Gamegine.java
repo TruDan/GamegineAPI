@@ -1,8 +1,5 @@
-package com.stealthyone.mcb.gamegine;
+package com.stealthyone.mcb.gamegine.api;
 
-import com.stealthyone.mcb.gamegine.games.Game;
-import com.stealthyone.mcb.gamegine.games.GameManager;
-import com.stealthyone.mcb.gamegine.games.GameUUID;
 import org.apache.commons.lang.Validate;
 import org.bukkit.Bukkit;
 
@@ -23,6 +20,7 @@ public final class Gamegine {
      * @return Gamegine API version.
      */
     public static String getVersion() {
+        //TODO: Properly get version from compiled JAR or replace on compile via Maven
         return "1.0-SNAPSHOT";
     }
 
@@ -47,21 +45,6 @@ public final class Gamegine {
         }
         Gamegine.provider = provider;
         Bukkit.getLogger().log(Level.INFO, "This server is running " + Gamegine.provider.getName() + " version " + Gamegine.provider.getVersion() + " (API version " + Gamegine.provider.getApiVersion() + ")");
-    }
-
-    /**
-     * Returns the game manager.
-     *
-     * @return Game manager from provider.
-     *         Null if provider isn't set.
-     */
-    public static GameManager getGameManager() {
-        return Gamegine.provider.getGameManager();
-    }
-
-    public static Game getGame(GameUUID gameUuid) {
-        Validate.notNull(gameUuid, "Game UUID cannot be null.");
-        return Gamegine.provider == null ? null : Gamegine.provider.getGameManager().getGame(gameUuid);
     }
 
 }

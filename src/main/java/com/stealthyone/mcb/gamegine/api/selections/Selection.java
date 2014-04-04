@@ -1,4 +1,4 @@
-package com.stealthyone.mcb.gamegine.selections;
+package com.stealthyone.mcb.gamegine.api.selections;
 
 import org.bukkit.Location;
 

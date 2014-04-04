@@ -1,9 +1,10 @@
-package com.stealthyone.mcb.gamegine;
+package com.stealthyone.mcb.gamegine.api;
 
-import com.stealthyone.mcb.gamegine.games.GameManager;
-import com.stealthyone.mcb.gamegine.players.PlayerManager;
-import com.stealthyone.mcb.gamegine.signs.SignManager;
-import com.stealthyone.mcb.gamegine.storage.StorageManager;
+import com.stealthyone.mcb.gamegine.api.games.GameManager;
+import com.stealthyone.mcb.gamegine.api.logging.GamegineLogger;
+import com.stealthyone.mcb.gamegine.api.players.PlayerManager;
+import com.stealthyone.mcb.gamegine.api.signs.SignManager;
+import com.stealthyone.mcb.gamegine.api.storage.StorageManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public interface GamegineProvider {
@@ -24,7 +25,7 @@ public interface GamegineProvider {
      * @return JavaPlugin owning the provider.
      */
     public JavaPlugin getOwner();
-    
+
     /**
      * Returns the name of the provider.
      *
@@ -47,6 +48,20 @@ public interface GamegineProvider {
     public String getApiVersion();
 
     /**
+     * Returns the Gamegine logger.
+     *
+     * @return Gamegine logger associated with the provider.
+     */
+    public GamegineLogger getLogger();
+
+    /**
+     * Returns the main Gamegine configuration file.
+     *
+     * @return Gamegine configuration file.
+     */
+    public GamegineConfig getConfig();
+
+    /**
      * Returns the storage manager associated with the provider.
      *
      * @return StorageManager defined for the provider.
@@ -65,7 +80,7 @@ public interface GamegineProvider {
      *
      * @return PlayerManager defined for the provider.
      */
-    public PlayerManager getPlayerManager();
+    public PlayerManager getPlayerTracker();
 
     /**
      * Returns the sign manager associated with the provider.

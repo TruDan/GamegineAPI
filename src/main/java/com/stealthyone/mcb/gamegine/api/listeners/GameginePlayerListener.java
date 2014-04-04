@@ -1,6 +1,6 @@
-package com.stealthyone.mcb.gamegine.listeners;
+package com.stealthyone.mcb.gamegine.api.listeners;
 
-import com.stealthyone.mcb.gamegine.Gamegine;
+import com.stealthyone.mcb.gamegine.api.Gamegine;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -15,7 +15,7 @@ public class GameginePlayerListener implements Listener {
 
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent e) {
-        Gamegine.getProvider().getPlayerManager().handlePlayerConnect(e.getPlayer());
+        Gamegine.getProvider().getPlayerTracker().handlePlayerConnect(e.getPlayer());
     }
 
     @EventHandler
@@ -29,7 +29,7 @@ public class GameginePlayerListener implements Listener {
     }
 
     private void playerQuit(Player player) {
-        Gamegine.getProvider().getPlayerManager().handlePlayerDisconnect(player);
+        Gamegine.getProvider().getPlayerTracker().handlePlayerDisconnect(player);
     }
 
 }

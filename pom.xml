@@ -20,27 +20,20 @@
     </ciManagement>
 
     <scm>
-        <connection>scm:git:git@github.com:Gamegine/Gamegine.git</connection>
-        <url>scm:git:git@github.com:Gamegine/Gamegine.git</url>
-        <developerConnection>scm:git:git@github.com:Gamegine/Gamegine.git</developerConnection>
+        <connection>scm:git:git://github.com/gamegine/GamegineAPI.git</connection>
+        <developerConnection>scm:git:git@github.com:Stealth2800/SimpleSlap.git</developerConnection>
+        <url>https://github.com/Gamegine/GamegineAPI</url>
     </scm>
 
     <distributionManagement>
-        <site>
-            <id>jd.stealthyone.com</id>
-            <url>file:///home/javadocs/public_html/gamegine</url>
-        </site>
-
         <repository>
-            <id>releases</id>
-            <name>repo.stealthyone.com Releases</name>
-            <url>http://repo.stealthyone.com/artifactory/plugins-release</url>
+            <id>stealthyone-releases</id>
+            <url>http://repo.stealthyone.com/releases</url>
         </repository>
 
         <snapshotRepository>
-            <id>snapshots</id>
-            <name>repo.stealthyone.com Snapshots</name>
-            <url>http://repo.stealthyone.com/artifactory/plugins-snapshot</url>
+            <id>stealthyone-snapshots</id>
+            <url>http://repo.stealthyone.com/snapshots</url>
         </snapshotRepository>
     </distributionManagement>
 
@@ -48,6 +41,11 @@
         <repository>
             <id>bukkit-repo</id>
             <url>http://repo.bukkit.org/content/groups/public</url>
+        </repository>
+
+        <repository>
+            <id>stealthyone-repo</id>
+            <url>http://repo.stealthyone.com/content</url>
         </repository>
     </repositories>
 
@@ -57,20 +55,6 @@
             <artifactId>bukkit</artifactId>
             <version>1.7.2-R0.3-SNAPSHOT</version>
             <scope>compile</scope>
-            <type>jar</type>
-        </dependency>
-
-        <dependency>
-            <groupId>com.stealthyone.mcb</groupId>
-            <artifactId>stbukkitlib</artifactId>
-            <version>3.0-SNAPSHOT</version>
-            <scope>compile</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.bukkit</groupId>
-                    <artifactId>craftbukkit</artifactId>
-                </exclusion>
-            </exclusions>
             <type>jar</type>
         </dependency>
     </dependencies>
